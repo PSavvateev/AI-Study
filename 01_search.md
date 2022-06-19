@@ -37,6 +37,7 @@ BFS expands nodes in order of their depth from the root, generating one level of
 |     5    |     S->C->F             |     S, A, C, D, F          |
 |     6    |     S->D->B, S->D->G    |     S, A, C, D, F, B       |
 |     7    |     S->D->G             |     S, A, C, D, F, B, G    |
+
 <br/><br/><br/>
 
 ### <div style="color:lightblue">Depth-First Search (DFS) </div>
@@ -113,6 +114,7 @@ DFS generates next a child of the deepest unexpanded node.
 |     | S->D->B->E     | 2+1+3 =6  |             |                        |
 |     | S->C->F->G     | 3+0+4=7   |             |                        |
 |     | S->D->G        | 2+6=8     |             |                        |
+
 <br/><br/><br/>
 
 ## <div style="color:blue" align="center">Informed (Heuristic) Search</div>
