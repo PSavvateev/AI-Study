@@ -1,12 +1,17 @@
 # Search Algorithms
+<br/>
+
 
 **Search** - process of finding sequence of actions that transforms a start state into a goal state.
 
-<img src="imgs/01_searchclass.png" width="300">
+<img src="imgs/01_searchclass.png" width="500">
+<br/><br/><br/>
 
-## Uninformed Search
 
-### Breadth-First Search (BFS)
+## <div style="color:blue" align="center"> Uninformed Search</div>
+<br/>
+
+### <div style="color:lightblue">Breadth-First Search (BFS)</div>
 
 **_BFS_** finds the most efficient path to the goal based on the lowest number of edges.
 BFS expands nodes in order of their depth from the root, generating one level of the tree at a time until solution is found.
@@ -15,8 +20,10 @@ BFS expands nodes in order of their depth from the root, generating one level of
 > 
 
 <img src="imgs/01_bfs.png" width="300">
+<br/><br/>
 
-#### *BFS example*
+
+#### <div style="color:lightblue"> *BFS example*</div>
 **S**: start node; **G**: goal node
 
 <img src="imgs/01_exmp.png" width="200">
@@ -30,9 +37,9 @@ BFS expands nodes in order of their depth from the root, generating one level of
 |     5    |     S->C->F             |     S, A, C, D, F          |
 |     6    |     S->D->B, S->D->G    |     S, A, C, D, F, B       |
 |     7    |     S->D->G             |     S, A, C, D, F, B, G    |
+<br/><br/><br/>
 
-
-### Depth-First Search (DFS)
+### <div style="color:lightblue">Depth-First Search (DFS) </div>
 
 **_DFS_** finds the fastest path to the goal based on the stack order.
 DFS generates next a child of the deepest unexpanded node.
@@ -41,8 +48,9 @@ DFS generates next a child of the deepest unexpanded node.
 > 
 
 <img src="imgs/01_dfs.png" width="300">
+<br/><br/>
 
-#### *DFS example*
+#### <div style="color:lightblue">*DFS example*</div>
 
 **S**: start node; **G**: goal node
 
@@ -57,15 +65,17 @@ DFS generates next a child of the deepest unexpanded node.
 |     5    |     F->G, F->E    |     S, A, C, F, E       |
 |     6    |     F->G          |     S, A, C, F, E, G    |
 
+<br/><br/><br/>
 
-### Uniform-Cost Search (UCS)
+### <div style="color:lightblue"> Uniform-Cost Search (UCS)</div>
 
 **_UCS_** finds a path with the lowest cost (vs. BFS, finding a path with the lowest number of edges)
 
 >Manages the list as a priority queue
 >
+<br/><br/>
 
-### *UCS example*
+#### <div style="color:lightblue">*UCS example*</div>
 
 **S**: start node; **G**: goal node
 
@@ -103,16 +113,18 @@ DFS generates next a child of the deepest unexpanded node.
 |     | S->D->B->E     | 2+1+3 =6  |             |                        |
 |     | S->C->F->G     | 3+0+4=7   |             |                        |
 |     | S->D->G        | 2+6=8     |             |                        |
+<br/><br/><br/>
 
-## Informed (Heuristic) Search
+## <div style="color:blue" align="center">Informed (Heuristic) Search</div>
 
 **_Heuristic_** is an approximation to search more efficiently. A heuristic measure tries to approximate the distance from each node to the goal.
 Heuristic evaluation function estimates cost of an optimal path between the states.
 
 **_Admissible heuristics_** - always underestimate the true cost to the goal.
 **_Informative heuristics_** - provides cues to where to direct the search; it helps to prioritize different nodes during heuristic search.
+<br/><br/>
 
-### Greedy Search
+### <div style="color:lightblue">Greedy Search</div>
 **_Greedy search_** tries to find a solution as fast as possible, using the smallest possible heuristic.
 >**_Greedy algorithms_** aim to make the optimal choice at that given moment. Each step it chooses the optimal choice, without knowing the future. It attempts to find the globally optimal way to solve the entire problem using this method.
 >
@@ -121,8 +133,9 @@ Greedy property: "At exact moment in time, what is the optimal choice to make?"
 Greedy algorithms break down when:
 - the heuristics are uninformative or too similar;
 - the heuristics are inadmissible.
+<br/><br/>
 
-#### *Greedy search example*
+#### <div style="color:lightblue">*Greedy search example*</div>
 
 **S**: start node; **G**: goal node
 
@@ -146,10 +159,13 @@ Greedy algorithms break down when:
 |          |     S -> D -> E              |     4                  |                    |
 |          |     S -> A                   |     8                  |                    |
 
-### A* Search Algorithm
-A* search combines elements of UCS with the pure heuristic search.
+<br/><br/>
 
-#### *A\* Search example*
+### <div style="color:lightblue">A* Search Algorithm</div>
+A* search combines elements of UCS with the pure heuristic search.
+<br/><br/>
+
+#### <div style="color:lightblue">*A\* Search example*</div>
 
 **S**: start node; **G**: goal node
 
@@ -166,3 +182,6 @@ A* search combines elements of UCS with the pure heuristic search.
 |     4    |     S -> D -> E-> G    |     3+1+4=8    |     0                  |     8              |     YES            |
 |          |     S -> D -> B        |     3+5=8      |     3                  |     11             |                    |
 |          |     S -> A             |     5          |     8                  |     13             |                    |
+
+<br/><br/><br/>
+
